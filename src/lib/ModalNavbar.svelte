@@ -3,7 +3,8 @@
     import DownloadIcon from '$lib/icons/DownloadIcon.svelte';
     interface Wallpaper{
         name:string,
-        download_url:string
+        download_url:string,
+        path:string
     }
     let {currentWall,closeModal}:{currentWall : Wallpaper,closeModal: VoidFunction}=$props()
 
@@ -38,7 +39,7 @@
             <h6 class="hidden lg:block text-md grow">{currentWall.name}</h6>
             <button
                 class="p-2 self-end"
-                onclick={()=>handleDownload(currentWall.download_url,currentWall.name)}
+                onclick={()=>handleDownload(`https://cdn.jsdelivr.net/gh/abhishekpaul724/catppuccin-mocha-wallpapers@main/${currentWall.path}`,currentWall.name)}
             >
                     <DownloadIcon className="h-10 w-10 pt-2 hover:opacity-50"/>
             </button>

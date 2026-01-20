@@ -2,7 +2,8 @@
     interface Wallpaper{
         name:string,
         download_url:string,
-        index:number
+        index:number,
+        path:string
     }
     import ChevronLeft from "$lib/icons/ChevronLeft.svelte";
     import ChevronRight from "$lib/icons/ChevronRight.svelte";
@@ -30,7 +31,7 @@
         <ChevronLeft className="h-8 w-8"/>
     </button>
     <img 
-        src={currentWall.download_url} 
+        src={`https://cdn.jsdelivr.net/gh/abhishekpaul724/catppuccin-mocha-wallpapers@main/${currentWall.path}`}
         alt=""
         class="max-w-[80vw] lg:max-h-[80vh] lg:max-w-[90vw] lg:max-h-[90vh]"
     >

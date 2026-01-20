@@ -10,7 +10,8 @@
     interface Wallpaper{
         name:string,
         download_url:string,
-        index:number
+        index:number,
+        path:string
     }
 
     let selectedIndex:number=$state(-1)
