@@ -31,7 +31,7 @@
         <ChevronLeft className="h-8 w-8"/>
     </button>
     <img 
-        src={`https://wsrv.nl/?url=${currentWall.download_url}&output=webp&ll&maxage=30d`}
+        src={`https://cdn.jsdelivr.net/gh/abhishekpaul724/catppuccin-mocha-wallpapers@main/${currentWall.path}`}
         alt=""
         class="max-w-[80vw] lg:max-h-[80vh] lg:max-w-[90vw] lg:max-h-[90vh]"
     >
